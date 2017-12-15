@@ -1,0 +1,19 @@
+<?xml version = "1.0"?>
+
+<xs:schema xmlns:xs = "http://www.w3.org/2001/XMLSchema">
+	<xs:element name = 'persons'>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name = 'item' type = 'ItemType' minOccurs = '0'
+					maxOccurs = 'unbounded' />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name = "ItemType">
+		<xs:sequence>
+			<xs:element name = "personid" type = "xs:int"/>
+			<xs:element name = "lastname" type = "xs:varchar"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
